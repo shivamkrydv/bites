@@ -307,6 +307,9 @@ button{
     .ourspecial{
         padding: 0;
     }
+    .nav-right{
+        gap: 0;
+    }
 }
 @media (max-width: 768px){
     .nav-items {
