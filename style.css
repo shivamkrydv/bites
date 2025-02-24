@@ -8,14 +8,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 /* font-family: "Eater", serif; */
 @import url('https://fonts.googleapis.com/css2?family=Eater&display=swap');
+/* fon font-family: "Splash", serif; */
+@import url('https://fonts.googleapis.com/css2?family=Splash&display=swap');
 
 html,body{
     /* background-color: #000; */
     max-width: 100vw;
     height: 100%;
     font-family: sans-serif;
+    transition: 0.3s all ease-in-out;
+}
+header{
+    position: relative;
+    width: 100%;
 }
 .nav{
+    position: sticky;
+    top: 0px;
     background-color: #142931;
     /* background-color: #1c4123; */
     display: flex;
@@ -25,6 +34,7 @@ html,body{
     box-shadow: -1px 4px 20px 0px #0009;
     /* height: 80px; */
     width: 100%;
+    z-index: 10;
 }
 .nav .logo,.mainhambar{
     display: flex;
@@ -143,8 +153,7 @@ html,body{
     box-shadow: -1px 4px 20px 0px #0009;
     height: 100%;
     width: 50%;
-    z-index: 10;
-    gap: 20px;
+    z-index: 100;
     box-shadow: 1px 1px 1000px 100px black;
 }
 .sidenav .logo{
@@ -281,6 +290,9 @@ h4.hero-item{
     padding: 10px;
 }
 h1.hero-item{
+    font-family: "Splash";
+    font-weight: 400;
+    font-style: normal;
     font-size: 6vmax;
 }
 
@@ -302,7 +314,7 @@ button.hero-item{
 .about-section{
     display: flex;
     flex-direction: column;
-    padding: 100px 10px;
+    padding: 100px 0px;
     align-items: center;
     justify-content: space-around;
     gap: 10px;
@@ -315,9 +327,10 @@ button.hero-item{
 .about-items{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    /* justify-content: space-around; */
+    justify-content: space-around;
     gap: 50px;
     align-items: center;    
+    padding: 30px;
 }
 .aboutitemtext{
     position: absolute;
@@ -542,7 +555,7 @@ div.register{
     justify-content: center;
     padding: 10px;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-image: url(./webbg1.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -717,13 +730,40 @@ div.profile{
 /* footer css */
 footer div.footer{
     width: 100%;
-    height: 100%;
-    background-color: black;
+    height: 50vh;
+    padding: 10px;
+    background: linear-gradient(to right, #141e30, #243b55);
+    /* background-image: linear-gradient(to right, red , yellow); */
 
 }
 
 div.footer .footeritems{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* gap: 50px; */
     color: white;
+    height: 100%;
+}
+.footerabout{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    align-items: center;
+    gap: 10px;
+}
+
+.welcomefooter{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    img{
+        width: clamp(50px ,100px ,150px);
+    }
+    h1{
+        font-size: 3em;
+    }
 }
 
 
@@ -757,6 +797,12 @@ div.footer .footeritems{
     }
     .sidenav{
         width: 100%;
+    }
+    .welcomefooter{
+        flex-direction: column;
+    }
+    .footerabout{
+        grid-template-columns: repeat(2,1fr);
     }
 }
 @media (max-width: 768px){
@@ -797,6 +843,9 @@ div.footer .footeritems{
     }
     .accinfo>.accorder,.accporder,.accsupport{
         font-size: 20px;
+    }
+    .footeritems .footerabout{
+        grid-template-columns: repeat(3,1fr);
     }
 }
 
