@@ -3,35 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitesfood | Store</title>
+    <title>Bitesfood | Registration</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="shortcut icon" href="./titlelefticon.png" type="image/x-icon">
+    <!-- remixicon css -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
 </head>
 <body>
     <header>
+        <div class="sidenav">
+            <div class="logo">
+                <div class="sidenavclose">
+                    <i class="ri-close-large-fill"></i>
+                </div>
+                <!-- <a href="./index.html">
+                    <img src="./logo1.png">
+                </a> -->
+            </div>
+            <div class="sidenav-items">
+                <div class="sidenav-item"><h4><a href="./index.html">Home</a></h4><div class="navitemanim"></div></div>
+                <div class="sidenav-item"><h4>Shop</h4><div class="navitemanim"></div></div>
+                <div class="sidenav-item"><h4>Menu</h4><div class="navitemanim"></div></div>
+                <div class="sidenav-item"><h4>Blog</h4><div class="navitemanim"></div></div>
+                <div class="sidenav-item"><h4><a href="#about-section">About Us</a></h4><div class="navitemanim"></div></div>
+                <div class="sidenav-item"><h4>Contact Us</h4><div class="navitemanim"></div></div>
+                <div class="sidenav-item"><h4><a href="./profile.html">Profile</a></h4><div class="navitemanim"></div></div>
+            </div>
+
+            <div class="sidenav-right">
+                <button class="login"><h4>
+                    <a href="./login.html">Login</a>
+                </h4> <div class="btnanimation"></div></button>
+                <button class="register"><h4><a href="./registration.html">Registration</a></h4> <div class="btnanimation"></div></button>
+            </div>
+        </div>
         <div class="nav">
+            <div class="mainhambar">
+                <i class="ri-menu-2-line"></i>
+            </div>
             <div class="logo">
                 <a href="./index.html">
                     <img src="./logo1.png">
                 </a>
             </div>
             <div class="nav-items">
-                <div class="nav-item"><h4>Home</h4><div class="navitemanim"></div></div>
+                <div class="nav-item"><h4><a href="./index.html">Home</a></h4><div class="navitemanim"></div></div>
                 <div class="nav-item"><h4>Shop</h4><div class="navitemanim"></div></div>
                 <div class="nav-item"><h4>Menu</h4><div class="navitemanim"></div></div>
                 <div class="nav-item"><h4>Blog</h4><div class="navitemanim"></div></div>
-                <div class="nav-item"><h4>About Us</h4><div class="navitemanim"></div></div>
+                <div class="nav-item"><h4><a href="#about-section">About Us</a></h4><div class="navitemanim"></div></div>
                 <div class="nav-item"><h4>Contact Us</h4><div class="navitemanim"></div></div>
-                <div class="nav-item"><h4><a href="./profile.html">My account</a></h4><div class="navitemanim"></div></div>
+                <div class="nav-item"><h4><a href="./profile.html">Profile</a></h4><div class="navitemanim"></div></div>
             </div>
+
             <div class="nav-right">
                 <button class="login"><h4>
-                    <a href="./profile.html">Login</a>
+                    <a href="./login.html">Login</a>
                 </h4> <div class="btnanimation"></div></button>
                 <button class="register"><h4><a href="./registration.html">Registration</a></h4> <div class="btnanimation"></div></button>
             </div>
         </div>
     </header>
+    <section>
+        <div class="register">
+            <form action="">
+                <h2>Register Account</h2>
+                <label for=""><input type="text" placeholder="Full name"></label>
+                <label for=""><input type="text" placeholder="Email"></label>
+                <label for=""><input type="number" placeholder="Mobile no"></label>
 
+                <label for=""><input type="password" placeholder="Password" minlength="8"></label>
+                <p class="newuser">Login account <a href="./login.html">Login</a></p>
+                <label for=""><input type="submit" value="Registration"></label>
+            </form>
+        </div> 
+     </section>
+
+
+     <script src="./script.js"></script>
 </body>
 </html>

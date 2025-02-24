@@ -3,12 +3,18 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+/* google font-family: "Caveat", serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+/* font-family: "Eater", serif; */
+@import url('https://fonts.googleapis.com/css2?family=Eater&display=swap');
+
 html,body{
+    /* background-color: #000; */
     max-width: 100vw;
     height: 100%;
-    background-color: #000;
+    font-family: sans-serif;
 }
-
 .nav{
     background-color: #142931;
     /* background-color: #1c4123; */
@@ -20,13 +26,28 @@ html,body{
     /* height: 80px; */
     width: 100%;
 }
+.nav .logo,.mainhambar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    i{
+        color: white;
+        font-size: 25px;
+    }
+}
+.mainhambar{
+    display: none;
+}
 .logo img{
-    height: 80px;
+    /* height: clamp(20px,60px,100px); */
+    width: clamp(50px,120px,200px);
+    /* width: 150px; */
 
 }
 .nav-items{
     display: flex;
-    font-size: 20px;
+    font-size: 17px;
     gap: 10px;
     color: white;
     height: 100%;
@@ -66,7 +87,7 @@ html,body{
 }
 .nav-right{
     display: flex;
-    font-size: 20px;
+    font-size: 17px;
     gap: 10px;
 }
 .nav-right button{
@@ -105,6 +126,138 @@ html,body{
     left: -100%;
     background-color: skyblue;
 }
+
+
+/* side navbar  */
+
+.sidenav{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #c8dce4f6;
+    /* background-color: #1c4123; */
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-around;
+    box-shadow: -1px 4px 20px 0px #0009;
+    height: 100%;
+    width: 50%;
+    z-index: 10;
+    gap: 20px;
+    box-shadow: 1px 1px 1000px 100px black;
+}
+.sidenav .logo{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0px;
+
+    /* padding: 10px 10px; */
+    i{
+        color: white;
+        font-size: 25px;
+    }
+}
+
+.sidenav .sidenavclose{
+    display: flex;
+    padding: 10px 20px;
+    &:hover{
+        background-color: #c8dce4f6;
+        i{
+            color: orange;
+        }
+    }
+}
+.logo img{
+    /* height: clamp(20px,60px,100px); */
+    width: clamp(50px,120px,200px);
+    /* width: 150px; */
+
+}
+.sidenav-items{
+    display: flex;
+    flex-direction: column;
+    font-size: 17px;
+    gap: 10px;
+    color: white;
+    height: 100%;
+}
+.sidenav-item{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 10px 20px;
+    &:hover{
+        .navitemanim{
+            left: 0;
+            transition: 0.5s all;
+        }
+        color: orange;
+        a{
+            color: orange;
+        }
+    }
+}
+.sidenav-item h4{
+    position: relative;
+    z-index: 10;
+    padding-bottom: 5px;
+    font-family: sans-serif;
+    a{
+        color: white;
+        text-decoration: none;
+    }
+}
+.sidenav-item .navitemanim{
+    position: absolute;
+    height: 5%;
+    width: 100%;
+    bottom: 0;
+    left: -100%;
+    background-color: orange;
+}
+.sidenav-right{
+    display: flex;
+    font-size: 17px;
+    gap: 10px;
+    padding: 10px 20px;
+}
+.sidenav-right button{
+    background-color: #ffd;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    z-index: 5;
+    &:hover{
+        .btnanimation{
+            left: 0;
+            transition: 0.5s all;
+        }
+    }
+    a{
+        color: black;
+        text-decoration: none;
+    }
+}
+.sidenav-right button:focus{
+    outline: green 1px solid;
+}
+.sidenav-right h4{
+    position: relative;
+    z-index: 99;
+    
+}
+
+
+
+
 .hero-section{
     height: 100vh;
     max-width: 100%;
@@ -149,7 +302,7 @@ button.hero-item{
 .about-section{
     display: flex;
     flex-direction: column;
-    padding: 100px 0px;
+    padding: 100px 10px;
     align-items: center;
     justify-content: space-around;
     gap: 10px;
@@ -193,13 +346,14 @@ button.hero-item{
     display: flex;
     align-items: flex-end;
     height: 400px;    
-    width: 300px;
-    background-image: url(aboutf1.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    /* width: 300px; */
+    /* background-image: url(aboutf1.jpg); */
     overflow: hidden;
     justify-content: center;
+    img{
+        object-position: center;
+        object-fit: cover;
+    }
     &:hover{
         .aboutitemtext{
             /* opacity: 1; */
@@ -214,13 +368,15 @@ button.hero-item{
     display: flex;
     align-items: flex-end;
     height: 400px;    
-    width: 300px;
-    background-image: url(aboutf2.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    /* width: 300px; */
+    /* background-image: url(aboutf2.jpg); */
     overflow: hidden;
     justify-content: center;
+    img{
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
     &:hover{
         .aboutitemtext{
             bottom: -5%;
@@ -234,13 +390,15 @@ button.hero-item{
     display: flex;
     align-items: flex-end;
     height: 400px;    
-    width: 300px;
-    background-image: url(aboutf3.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    /* width: 300px; */
+    /* background-image: url(aboutf3.jpg); */
     overflow: hidden;
     justify-content: center;
+    img{
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
     &:hover{
         .aboutitemtext{
             bottom: -5%;
@@ -251,11 +409,12 @@ button.hero-item{
 }
 .ourspecial{
     padding: 50px;
-    width: 100%;
+    /* width: 100%; */
     display: grid;
     grid-template-columns: repeat(2,1fr);
     justify-content: space-around;
     background-color: #141E20;
+    overflow: hidden;
 }
 .ourspecialpart1{
     /* padding: 40px; */
@@ -264,8 +423,14 @@ button.hero-item{
     overflow: hidden;
     img{
         opacity: 0.5;
+        width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: center;
+        transition: 1s;
+        &:hover{
+            scale: 1.2;
+        }
     }
 }
 .ourspecialpart2{
@@ -298,9 +463,278 @@ button.hero-item{
     border: none;
     outline: none;
 }
+
+/* login page css start */
+
+div.login{
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+    height: 100vh;
+    background-image: url(./webbg1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+div.login form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    padding: 20px 80px 20px 80px;
+    border-radius: 15px 30% 15px 30%;
+    background-color: rgb(192, 176, 176);
+    border: 10px solid black;
+}
+div.login h2{
+    font-size: larger;
+}
+div.login .newuser{
+    color: black;
+    gap: 10px;
+    a{
+        color: white;
+        /* text-decoration: none; */
+    }
+}
+div.login input{
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-bottom: 1px solid grey;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+div.login input:focus{
+    /* border: none; */
+    outline: none;
+    /* transition: 1s; */
+}
+div.login input[type="submit"]{
+    border-radius: 15px;
+    color: red;
+    background-color: white;
+    font-size: 20px;
+    /* transition: 1s; */
+    &:hover{
+        background-color: #d6d1d1;
+    }
+}
+
+/* login page css end */
+
+
+/* registration page css start */
+div.register{
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    background-image: url(./webbg1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+div.register form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    padding: 20px 80px 20px 80px;
+    border-radius: 15px 30% 15px 30%;
+    background-color: rgb(192, 176, 176);
+    border: 10px solid black;
+}
+div.register h2{
+    font-size: larger;
+}
+div.register .newuser{
+    color: black;
+    gap: 10px;
+    a{
+        color: white;
+        /* text-decoration: none; */
+    }
+}
+div.register input{
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-bottom: 1px solid grey;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+div.register input:focus{
+    /* border: none; */
+    outline: none;
+    /* transition: 1s; */
+}
+div.register input[type="submit"]{
+    border-radius: 15px;
+    color: red;
+    background-color: white;
+    font-size: 20px;
+    transition: 1s;
+}
+
+/* register css end*/
 button{
     cursor: pointer;
 }
+
+
+/* profile css  */
+div.profile{
+    /* background-color: whitesmoke; */
+    background-image: url("./profile\ bg.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.profile .profilebox{
+    padding: 80px 20px;
+    margin-top: 100px;
+    width: 80%;
+    display: flex;
+    align-items: flex-start;
+    background-color: #f5f5f58a;
+    box-shadow: 1px 1px 10px 1px black;
+}
+.profilebox1{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-end; */
+    gap: 20px;
+    
+    .name{
+        /* font-family: ; */
+        font-size: 30px;
+        color: black;
+        span{
+            color: blue;
+        }
+    }
+}
+
+.accinfo{
+    display: flex;
+    /* align-items: center; */
+    gap: 20px;
+    font-family: "Caveat", serif;
+    font-family: "Eater", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+}
+.profilebox1 .accorder{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    &:hover{
+        color: green;
+    }
+    i{
+        font-size: 30px;
+    }
+    
+}
+.profilebox1 .accporder{
+    cursor: pointer;
+    /* font-size: 15px; */
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    word-spacing: 0.1px;
+    &:hover{
+        color: red;
+    }
+    i{
+        font-size: 30px;
+    }
+
+}
+.profilebox1 .accsupport{
+    cursor: pointer;
+    /* font-size: 15px; */
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    word-spacing: 0.1px;
+    &:hover{
+        color: blue;
+    }
+    i{
+        font-size: 30px;
+    }
+
+}
+.profilebox2{
+    display: flex;
+    align-items: center;
+    width: 40%;
+    border: 1px solid oldlace;
+    border-radius: 50% 100px;
+    margin: 0;
+    overflow: hidden;
+    img{
+        width: 100%;
+        object-position: top;
+        object-fit: cover;
+    }
+}
+
+
+/* footer css */
+footer div.footer{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+
+}
+
+div.footer .footeritems{
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 @media (max-width:400px){
@@ -308,11 +742,34 @@ button{
         padding: 0;
     }
     .nav-right{
-        gap: 0;
+        gap: 2px;
+    }
+    div.login form{
+        padding: 20px 10px;
+    }
+    div.register form{
+        padding: 20px 10px;
+    }
+    .profile .profilebox{
+        padding: 50px 10px;
+        /* align-items: center; */
+        justify-content: flex-start;
+    }
+    .sidenav{
+        width: 100%;
     }
 }
 @media (max-width: 768px){
+    .mainhambar{
+        display: flex;
+    }
+    .nav{
+        padding: 10px;
+    }
     .nav-items {
+        display: none;
+    }
+    .nav-right{
         display: none;
     }
     .hero-section{
@@ -323,7 +780,26 @@ button{
         grid-template-columns: 1fr;
 
     }
+    div.profile{
+        background-size: auto;
+    }
+    .profile .profilebox{
+        /* align-items: center; */
+        padding: 10px;
+        width: 90%;
+        flex-direction: column-reverse;
+        gap: 10px;
+        justify-content: flex-end;
+        font-size: 10px;
+    }
+    .profile .profilebox1 i{
+        font-size: 20px;
+    }
+    .accinfo>.accorder,.accporder,.accsupport{
+        font-size: 20px;
+    }
 }
+
 @media (max-width:800px){
     .about-items{
         grid-template-columns: 1fr;
