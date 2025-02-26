@@ -155,6 +155,8 @@ header{
     width: 50%;
     z-index: 100;
     box-shadow: 1px 1px 1000px 100px black;
+    overflow-y: scroll;
+
 }
 .sidenav .logo{
     display: flex;
@@ -177,7 +179,7 @@ header{
     &:hover{
         background-color: #c8dce4f6;
         i{
-            color: orange;
+            color: #eed277;
         }
     }
 }
@@ -193,7 +195,7 @@ header{
     font-size: 17px;
     gap: 10px;
     color: white;
-    height: 100%;
+    /* height: 100%; */
 }
 .sidenav-item{
     position: relative;
@@ -279,13 +281,12 @@ header{
     background-size: 100%;
     background-position: top;
     background-repeat: no-repeat;
-    opacity: 0.99;
-    color: #751;
+    color: black;
 }
 h4.hero-item{
     /* font-size: 2vmax; */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* color: white; */
+    /* color: black; */
     font-weight: 500;
     padding: 10px;
 }
@@ -293,19 +294,20 @@ h1.hero-item{
     font-family: "Splash";
     font-weight: 400;
     font-style: normal;
-    font-size: 6vmax;
+    font-size: 7vmax;
+    color: red;
 }
 
 button.hero-item{
-    background-color: yellow;
+    background-color: #ffa60091;
     padding: 10px 20px;
     border-radius: 15px;
     border: none;
     font-size: 20px;
     cursor: pointer;
+    box-shadow: 1px 1px 10px 1px black;
     &:hover{
-        /* background-color: red; */
-        box-shadow: 1px 1px 10px 1px red;
+        background-color: #ffa500;
     }
 }
 
@@ -339,7 +341,7 @@ button.hero-item{
     align-items: center;
     border-radius: 20px;
     width: 100%;
-    height: 50%;
+    height: 60%;
     bottom: -100%;
     padding: 20px;
     background-color: #cbbc91;
@@ -364,8 +366,8 @@ button.hero-item{
     overflow: hidden;
     justify-content: center;
     img{
-        object-position: center;
         object-fit: cover;
+        object-position: center;
     }
     &:hover{
         .aboutitemtext{
@@ -410,7 +412,7 @@ button.hero-item{
     img{
         width: 100%;
         object-fit: cover;
-        object-position: center;
+        object-position: top;
     }
     &:hover{
         .aboutitemtext{
@@ -468,6 +470,12 @@ button.hero-item{
     justify-content: space-between;
     font-weight: 200;
     font-family: sans-serif;
+    /* position: relative; */
+}
+
+.special-line{
+    margin: 0px 10px;
+    color: yellow;
 }
 .ourspecialpart2 button{
     padding: 10px;
@@ -648,9 +656,6 @@ div.profile{
         /* font-family: ; */
         font-size: 30px;
         color: black;
-        span{
-            color: blue;
-        }
     }
 }
 
@@ -715,10 +720,9 @@ div.profile{
     display: flex;
     align-items: center;
     width: 40%;
-    border: 1px solid oldlace;
-    border-radius: 50% 100px;
     margin: 0;
-    overflow: hidden;
+    border-radius: 50%;
+    /* overflow: hidden; */
     img{
         width: 100%;
         object-position: top;
@@ -732,8 +736,9 @@ footer div.footer{
     width: 100%;
     height: 50vh;
     padding: 10px;
-    background: linear-gradient(to right, #141e30, #243b55);
+    /* background: linear-gradient(to right, #141e30, #243b55); */
     /* background-image: linear-gradient(to right, red , yellow); */
+    background-color: #0b161a;
 
 }
 
@@ -819,8 +824,8 @@ div.footer .footeritems{
         display: none;
     }
     .hero-section{
-        background-size: auto;
-        color: #940;
+        background-size: cover;
+        /* color: white; */
     }
     .ourspecial{
         grid-template-columns: 1fr;
