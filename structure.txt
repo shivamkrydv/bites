@@ -1,0 +1,57 @@
+smooth scrolling ✅
+    attach loco css ✅
+    attach locomotive scroll min js ✅
+    some code from loco github for js ✅
+gsap
+
+
+scrolltriger
+
+
+
+
+
+# time 1:10:28 from to start advance 
+    go on google search
+    locomotive github
+        click first site
+
+    in github page 
+    
+    CSS
+    Add the base styles to your CSS file.
+    "locomotive-scroll.css" click on this file
+
+    and copy content from this "locomotive-scroll.css" file and paste in own localfolder create a file 
+    eg:- loco.css
+    and link with html
+
+
+    then go in JS section in github page 
+
+    "
+    const scroll = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]'),
+    smooth: true
+    }); 
+    "
+
+    only 
+
+
+
+    go next page search "locomotive js cdn"
+
+    and click first site 
+        -->  locomotive-scroll.min.js
+        this file link copy mean first see in web page and click then open a code
+        then alt + d then copy url
+
+        and link own html eg :- index.html 
+            "<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>"
+
+
+
+
+
+

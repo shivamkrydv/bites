@@ -1,3 +1,9 @@
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('#main'),
+    smooth: true
+    }); 
+
+
 let showsidenav = document.querySelector(".mainhambar");
 let hidesidenav = document.querySelector(".sidenavclose");
 
